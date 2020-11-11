@@ -1,0 +1,238 @@
+body {
+  overflow-x: hidden; /*--right gutter fix--*/
+  font-family: sans-serif;
+  color:#0078C8;
+}
+.navbar {
+  background-color:#0078C8;
+  text-transform: uppercase;
+}
+.navbar-brand img {
+  height: 2rem;
+}
+.home-inner {
+  background: url('img/landing.png');
+}
+.caption {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: rgba(0, 120 , 200, .6);
+  color: white;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+.caption h3 {
+  color: white;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.btn {
+  border-width: medium;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: .5rem 1.1rem;
+  font-size: .9rem;
+  margin: 1rem;
+}
+h3.heading {
+  text-align: center;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+}
+.heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: #0078C8;
+  margin: 0 auto 2rem;
+}
+#about p {
+  text-align: center;
+}
+.border-primary {
+  border-top: .2rem solid #0078C8!important;
+}
+.padding {
+  padding: 1rem 1.5rem;
+}
+img.portofolio {
+  max-width: 100%;
+}
+.no-padding .col-md-6{
+  padding: 0;
+}
+#products .card {
+  margin: 0 .5rem;
+  border-radius: 0;
+  box-shadow: 5px 5px 15px #024d8b;
+  transition: all 0.3s ease-in;
+  background-color: #dae0e5;
+}
+#products .card:hover {
+  background: #5799cf;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 10px #9e9e9e;
+}
+/*.card-body h4 {
+  border-top: 1px solid #0078C8!important;
+}*/
+
+.card-body .heading-underline {
+    width: 70%;
+    height: 1px;
+    background-color: #0078C8;
+    margin: 0 auto 2rem;
+}
+.footer .row {
+  background-color: #0078C8;
+  color: white;
+  padding: 1rem 2rem 3rem;
+}
+.footer img {
+  height: 2rem;
+  margin: 1rem 0;
+}
+/* === contact section footer2 ===*/
+
+.footer2 {
+  background: url('/img/footer/footer.jpg') no-repeat;
+  background-size: cover;
+  /*background-color: #024d8b;*/
+  color: white;
+}
+.row.outer {
+  background-color: rgba(0, 120, 200, .85);
+  padding: 1rem 2rem 3rem;
+}
+.footer2 img {
+  height: 2rem;
+  margin: 1.5rem 0;
+}
+
+.footer2 h3 {
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+ul.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+ul.social li {
+  display: inline;
+  padding-right: .8rem;
+}
+ul.social li a {
+  color: white;
+  transition: all .2s ease;
+}
+ul.social li a:hover {
+  color: #0078C8;
+}
+
+/*=== contact form ===*/
+.form-group {
+  margin-bottom: 1.3rem;
+}
+/*.form-control {
+  background-color: #53595f;
+  border-radius: 0;
+  border: .15rem solid #666b71;
+  color: white!important;
+  font-size: 1.1rem;
+}
+
+.form-control:focus {
+  background-color: #53595f;
+  border: .15rem solid #666b71;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b2b5b8!important;
+}*/
+
+hr.socket {
+  border-top: .2rem solid white;
+  width: 100%;
+}
+
+
+
+/*--- iOS Landing Page Fix --*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+
+  .caption h3 {
+    font-size: 1.7rem;
+    padding-bottom: 1.5rem;
+    }
+  .btn {
+    padding: .5rem 1.1rem;
+    font-size: .8rem;
+  }
+}
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+
+  .caption h3 {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    }
+  .btn {
+    padding: .5rem 1rem;
+    font-size: .7rem;
+  }
+}
+/* Devices under 576px (ms) */
+@media (max-width: 575.98px) {
+
+  .caption h3 {
+    font-size: 1.3rem;
+    padding-bottom: .9rem;
+   }
+  .btn {
+    padding: .5rem 1.1rem;
+    font-size: .7rem;
+  }
+  .caption {
+    border-radius: 0;
+  }
+}
