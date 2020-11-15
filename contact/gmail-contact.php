@@ -17,7 +17,7 @@ $fromEmail = $_POST['email'];
 $fromName = $_POST['name'];
 
 // an email address that will receive the email with the output of the form
-$sendToEmail = 'email@gmail.com';
+$sendToEmail = 'ponchoelizondo65@gmail.com';
 // form field names and their translations.
 // array variable name => Text to appear in the email
 $fields = array('name' => 'Name:', 'email' => 'Email:', 'message' => 'Message:');
@@ -72,8 +72,8 @@ $mail->IsSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = "465"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
                 
-                $mail->Username = "email@gmail.com";
-                $mail->Password = "password";
+                $mail->Username = "ponchoelizondo65@gmail.com";
+                $mail->Password = "pato1995";
 
                 $mail->From = $fromEmail;
                 $mail->FromName = $fromName;

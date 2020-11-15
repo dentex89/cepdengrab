@@ -16,8 +16,13 @@ require './PHPMailer-master/vendor/autoload.php';
 $fromEmail = $_POST['email'];
 $fromName = $_POST['name'];
 
-// an email address that will receive the email with the output of the form
-$sendToEmail = 'ponchoelizondo65@gmail.com';
+// an email address & name that will receive the email with the output of the form
+$sendToEmail = 'alfonso@dentex.com.mx';
+$sendToName = 'Name';
+
+// subject of the email
+$subject = 'Nuevo mensaje de la forma de contacto';
+
 // form field names and their translations.
 // array variable name => Text to appear in the email
 $fields = array('name' => 'Name:', 'email' => 'Email:', 'message' => 'Message:');
@@ -53,52 +58,13 @@ try
     
     $mail = new PHPMailer;
 
-//************** IMPORTANT
-
-    // write you email configuration below and see the important steps for it to work.
-
-    // IMPORTANT: You must turn off 2 step verification on your google/gmail account:
-    // Instructions: https://support.google.com/accounts/answer/1064203?co=GENIE.Platform%3DDesktop&hl=en
-    // Security Page: https://myaccount.google.com/security
-
-    // IMPORTANT You must also "Allow less secure apps" on your google/gmail account:
-    // https://myaccount.google.com/lesssecureapps
-
-//************** IMPORTANT
-
-$mail->IsSMTP();
-                $mail->SMTPAuth='true';
-                $mail->SMTPSecure = 'ssl';
-                $mail->Host = 'smtp.gmail.com';
-                $mail->Port = "465"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
-                
-                $mail->Username = "ponchoelizondo65@gmail.com";
-                $mail->Password = "pato1995";
-
-                $mail->From = $fromEmail;
-                $mail->FromName = $fromName;
-                $mail->AddAddress($sendToEmail);
-                $mail->AddReplyTo($fromEmail,$fromName);
+    $mail->setFrom($fromEmail, $fromName);
+    $mail->addAddress($sendToEmail, $sendToName); // you can add more addresses by simply adding another line with $mail->addAddress();
+    $mail->addReplyTo($_POST['email'], $_POST['name']);
+    
 
 
-
-
-
-
-    // end email configuration
-
-
-
-
-
-
-
-
-
-
-
-
-    $mail->Subject = 'New message from contact form';
+    $mail->Subject = $subject;
 
     $mail->Body = $emailTextHtml;
     $mail->isHTML(true);

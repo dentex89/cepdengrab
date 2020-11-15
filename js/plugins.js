@@ -4,6 +4,8 @@ $(document).ready(function () { //when document(DOM) loads completely
     $(window).scroll(checkScroll); //get scroll position of window
 });
 
+
+
 function checkScroll() { //check if page is scrolled
 if ($(window).scrollTop() >= 300) { //if window is scrolled 300px or more
     $('.navbar').addClass('solid'); //add class 'solid' to element with class 'navbar'
